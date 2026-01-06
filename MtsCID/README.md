@@ -33,6 +33,9 @@ python v3.8.6
 
 scikit-learn
 
+### Installation
+`pip install -r requirements.txt --index-url https://download.pytorch.org/whl/cu113`
+
 
 ## Data
 

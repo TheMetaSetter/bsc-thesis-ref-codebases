@@ -1,0 +1,3 @@
+# Python 3.8.6 required
+torch==1.11.0
+scikit-learn
