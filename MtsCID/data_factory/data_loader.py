@@ -11,8 +11,15 @@ from sklearn.preprocessing import StandardScaler
 # Add the root dir of project to the sys path
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
+# Print the current location of this file
+print("Data loader path:", os.path.abspath(__file__))
+
 class SWaTSegLoader(Dataset):
     def __init__(self, data_path, win_size, step, mode="train"):
+
+        # Debug
+        print("Data path:", data_path)
+
         self.mode = mode
         self.step = step
         self.win_size = win_size
