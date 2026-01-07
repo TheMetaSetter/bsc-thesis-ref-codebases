@@ -1,4 +1,5 @@
 import os
+import sys
 import random
 import numpy as np
 import pandas as pd
@@ -7,6 +8,8 @@ from torch.utils.data import Dataset, Subset
 from torch.utils.data import DataLoader
 from sklearn.preprocessing import StandardScaler
 
+# Add the root dir of project to the sys path
+ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
 class SWaTSegLoader(Dataset):
     def __init__(self, data_path, win_size, step, mode="train"):
