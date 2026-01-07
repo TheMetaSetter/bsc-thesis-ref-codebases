@@ -214,7 +214,7 @@ class SMDSegLoader(Dataset):
     def __init__(self, data_path, win_size, step, mode="train"):
         # Debug
         print(os.getcwd())
-        print(os.listdir("../data/")) # Check if SMD is actually there
+        print(os.listdir("data/")) # Check if SMD is actually there
 
         # Print the current location of this file
         print("Data loader path:", os.path.abspath(__file__))
