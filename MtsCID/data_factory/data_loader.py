@@ -11,6 +11,7 @@ from sklearn.preprocessing import StandardScaler
 # Add the root dir of project to the sys path
 ROOT_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
+
 class SWaTSegLoader(Dataset):
     def __init__(self, data_path, win_size, step, mode="train"):
         self.mode = mode
@@ -214,7 +215,7 @@ class SMDSegLoader(Dataset):
     def __init__(self, data_path, win_size, step, mode="train"):
         # Debug
         print(os.getcwd())
-        print(os.listdir("data/SMD")) # Check if SMD is actually there
+        print(os.listdir("data/SMD"))  # Check if SMD is actually there
 
         # Print the current location of this file
         print("Data loader path:", os.path.abspath(__file__))

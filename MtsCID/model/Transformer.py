@@ -62,7 +62,7 @@ class TransformerVar(nn.Module):
         self.__dict__.update(TransformerVar.DEFAULTS, **config)
 
         # Encoding
-        branch1_group = self.branches_group_embedding.split("_")[0]
+        branch1_group = self.branches_group_embedding.split("_")[0] # TODO: What is the contextual meaning of "branches_group_embedding"?
         branch2_group = self.branches_group_embedding.split("_")[1]
 
         branch1_dim = (

@@ -18,7 +18,7 @@ def main(config_setting):
         mkdir(config_setting.model_save_path)
 
     result_list = {key: [] for key in metric_list}
-    solver = Solver(vars(config_setting))
+    solver = Solver(vars(config_setting))   # TODO: Start reading here
 
     for i in range(config_setting.run_times):
         # To ensure that the model parameters are re-initialized before each round.
@@ -150,7 +150,7 @@ if __name__ == "__main__":
     parser.add_argument("--model_save_path", type=str, default="checkpoints")
 
     # Training setting
-    parser.add_argument("--num_epochs", type=int, default=300)
+    parser.add_argument("--num_epochs", type=int, default=20)
     parser.add_argument("--batch_size", type=int, default=64)
     parser.add_argument("--patience", type=int, default=10)
     parser.add_argument("--peak_lr", type=float, default=2e-3)
@@ -204,9 +204,10 @@ if __name__ == "__main__":
         if ("conv1d" not in config.branch1_networks) or (
             len(config.branch1_networks) < 2
         ):
-            updated_group_embedding = "False"
+            updated_group_embedding = "False"   # TODO: What is the contextual meaning of "updated_group_embedding"?
         else:
             updated_group_embedding = config.branches_group_embedding.split("_")[0]
+            # TODO: What is the contextual meaning of "branches_group_embedding"?
 
         if ("conv1d" not in config.branch2_networks) or (
             len(config.branch2_networks) < 2

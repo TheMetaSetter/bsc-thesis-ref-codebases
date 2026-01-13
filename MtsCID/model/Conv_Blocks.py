@@ -5,16 +5,16 @@ import torch.nn as nn
 class Inception_Block(nn.Module):
     def __init__(
         self,
-        in_channels,
+        in_channels,    # Number of input channels a.k.a number of covariates of training time-series (excluding the covariate of label)
         out_channels,
         kernel_list=[1, 3, 5],
         groups=1,
         init_weight=True,
     ):
         super(Inception_Block, self).__init__()
-        self.in_channels = in_channels
+        self.in_channels = in_channels  # Number of input channels a.k.a number of covariates of training time-series (excluding the covariate of label)
         self.out_channels = out_channels
-        self.kernel_list = kernel_list
+        self.kernel_list = kernel_list  # Different edge sizes for square-like kernels
         kernels = []
         for i in self.kernel_list:
             kernels.append(

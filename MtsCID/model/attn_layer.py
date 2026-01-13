@@ -279,7 +279,6 @@ class TemporalAttentionLayer(nn.Module):
 
             (v1, v2..)_tn || (v1, v2..)_t1
             (v1, v2..)_tn || (v1, v2..)_t2
-
         """
 
         K = self.num_nodes
